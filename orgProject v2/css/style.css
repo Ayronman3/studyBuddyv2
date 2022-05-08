@@ -1,0 +1,356 @@
+/* 
+/*affect all items*/
+/*
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: sans-serif;
+
+}
+nav{
+    background-color: #009933;
+   
+    padding: 5px 20px;
+}
+ul{
+    list-style-type: none;
+}
+a{ 
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    background: #d1e0e0;
+    transition: .5s;
+}
+.menu li{
+    font-size: 16px;
+    padding: 15px 5px;  
+}   
+/*para magactivate parin ang hover
+ effect kahit na di directly naka tutok 
+ sa item ang pointer*/
+/*
+ .menu li a{
+    display: block;
+}
+*/
+/* a means anchor tag*/
+/*
+.logo a{
+    font-size: 30px;
+    font-family: 'AR CHRISTY', sans-serif;
+}
+.button.secondary{
+    border-bottom: 1px #444 solid;
+}
+/* Mobile View*/
+/*
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/*arrangments of items*/
+/*
+.toggle{
+    order: 1;
+}
+.item.button{
+    order: 2;
+}
+.item{
+    width: 100%;
+    text-align: center;
+    /*puts the login and sign up item to the top*/
+    /*
+    order: 3;
+    display: none;
+
+}
+
+.item.active{
+    display: block;
+}
+
+
+
+
+/*toogle/bar*/
+/*
+.toggle{
+    /*we can now select the bars*/
+    /*
+    cursor: pointer;
+}
+.bars{
+    background: white;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+}
+.bars::before, .bars::after{
+    background: white;
+    /*whenever we are working with before and after pseudo elements, 
+    we need a content property( content: "";)*/
+    /*
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+}
+.bars::before{
+    top: 5px;
+}
+.bars::after{
+    top: -5px;
+}
+
+/* Tablet view*/
+/*
+@media all and (max-width: 468px){
+    .menu{
+        justify-content: center;
+
+    }
+    .logo{
+        /*it will allow it to grow (malalagay sa may side)*/
+        /*
+        flex: 1;
+    }
+    .item.button{
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle{
+        order: 2;
+
+    }
+    .button.secondary{
+        order: 0;
+    }
+
+    .button a{
+        text-decoration: none;
+        padding: 7px 15px;
+        background: transparent;
+        border: 1px solid #0099ff;
+        border-radius: 50em;
+    }
+    
+    .button.secondary{
+        padding: 7px 15px;
+        background: #0099ff;
+        border: 1px solid #0099ff ;
+        border-radius: 50em;
+    }
+    .button a:hover{
+        transition: all .5s;
+    }
+    .button:not(.secondary) a:hover{
+        background: #000099;
+        border-color: #000099;
+    }
+    .button.secondary a:hover{
+        color: #ddd;
+    }
+
+    
+}
+@media all and (max-width:768px){
+    .item{
+        display: block;
+        width: auto;
+    }
+    .toggle{
+        display: none;
+    }
+    .logo{
+        order: 0;
+
+    }
+    .item{
+        order: 1;
+    }
+    .button{
+        order: 2;
+    }
+    .menu li{
+        padding: 15px 10px;
+
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+}
+*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: sans-serif;
+}
+nav {
+  background: #009933;
+  padding: 5px 20px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+    background: #d1e0e0;
+    transition: .5s;
+}
+.logo a:hover {
+  text-decoration: none;
+  background: transparent;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.logo a{
+    font-size: 30px;
+    font-family: 'AR CHRISTY', sans-serif
+}
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+
+/* Mobile menu */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toggle {
+    order: 1;
+  }
+  .item.button {
+    order: 2;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+  }
+  .item.active {
+    display: block;
+  }
+  
+  /* Navbar Toggle */
+  .toggle {
+    cursor:pointer;
+  }
+  .bars{
+    background: white;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+
+  }
+  .bars:before,
+  .bars:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  .bars:before {
+    top: 5px;
+  }
+  .bars:after {
+    top: -5px;
+  }
+  
+  /* Tablet menu */
+  @media all and (min-width: 468px) {
+    .menu {
+        justify-content: center;
+    }
+  
+    .logo {
+        flex: 1;
+    }
+  
+    .item.button {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+    .toggle {
+        order: 2;
+    }
+    .button.secondary {
+        border: 0;
+    }
+    .button a {
+        padding: 7.5px 15px;
+        background: teal;
+        border: 1px #006d6d solid;
+        border-radius:50em;
+    }
+    .button.secondary a {
+        background: transparent;    
+    }
+    .button a:hover {
+        text-decoration: none;
+        transition:all .25s;
+    }
+    .button:not(.secondary) a:hover {
+        background: #006d6d;
+        border-color: #005959;
+    }
+    .button.secondary a:hover {
+        color: #ddd;
+    } 
+  }
+  
+  /* Desktop menu */
+  @media all and (min-width: 768px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+    .menu li.button {
+        padding-right: 0;
+    }
+  }
